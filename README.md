@@ -73,3 +73,18 @@ Subtipo do tipo referencia quando está não referencia nada
 
 #### Nothing
 Subtipo para todos os tipos, incluindo NULL, não indica nenhum valor.
+
+### Estruturas de controle
+
+#### If/else/else if
+Estrutura que impede a execução de uma parte do código a menos que uma condição seja atendida. Condições são expressões e o if retornará o resultado dela.
+
+#### For
+Estrutura para criação de loops, percorre uma lista de itens e executa o código designado até percorrer toda a lista.
+
+#### Try/Catch
+Try executa um código, Catch encontra o código de erro para que ele possa ser tratado.
+
+#### Match
+Varios casos são criados, cada um com um valor e um código, um valor é utilizado como entrada. Caso o valor sejá igual um dos casos seu respectivo código será executado.
+ 
