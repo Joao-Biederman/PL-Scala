@@ -87,4 +87,21 @@ Try executa um código, Catch encontra o código de erro para que ele possa ser 
 
 #### Match
 Varios casos são criados, cada um com um valor e um código, um valor é utilizado como entrada. Caso o valor sejá igual um dos casos seu respectivo código será executado.
- 
+
+### Funções
+Scala traz a possibilidade de escrever códigos tanto em POO quanto em programação funcional. As funções em Scala são separadas em dois grupos: Funções puras e Funções impuras.
+
+#### Funções Puras
+Funções puras, segundo Alvin Alexander, são funções onde o resultado depende somende dos valores inseridos na função, não podendo receber nenhum valor externo aos inputs (vindas do console ou de um banco de dados por exemplo), e que não promova nenhuma mudança em estados escondidos.
+As funções do pacote matemático de Scala são `abs`, `ceil`, `max`, `min`. Funções do pacote de Strings são `isEmpty`, `length` e `substring`. Metodos de funções também podem ser funções puras, alguns representantes de grupo são `drop`, `filter` e `map`.
+Funções puras podem ser escritas desde que seguidas as regras citadas acima.
+Exemplo de função pura escrita:
+```Scala
+def sum(list: List[Int]): Int = list match {
+    case Nil => 0
+    case head :: tail => head + sum(tail)
+}
+```
+
+#### Funções impuras
+São funções que alteram os parametros ou valores escondidos na função, acessam dados que não foram explicitamente passadas como parametros ou cujo retorno não dependente dos dados inseridos. Funções cujo retorno é do tipo Unit são um exemplo, uma vez que este tipo, apesar de ser um subtipo de valor, não retorna nada.
