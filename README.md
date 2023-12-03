@@ -99,7 +99,7 @@ def fazConta(callback: (Int, Int) => Int, x: Int, y: Int) {
 }
 
 println("Realiza as operações matemáticas")
-fazConta((x, y) => x + y, 5, 6); 
+fazConta((x, y) => x + y, 5, 6); // escreve no terminal a soma 5+6
 ```
 ###### Código por [DEVMEDIA](https://www.devmedia.com.br/conheca-a-linguagem-scala/32850)
 
