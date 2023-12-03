@@ -89,7 +89,21 @@ Try executa um código, Catch encontra o código de erro para que ele possa ser 
 Varios casos são criados, cada um com um valor e um código, um valor é utilizado como entrada. Caso o valor sejá igual um dos casos seu respectivo código será executado.
 
 ### Funções
-Scala traz a possibilidade de escrever códigos tanto em POO quanto em programação funcional. As funções em Scala são separadas em dois grupos: Funções puras e Funções impuras.
+Em Scala funções podem ser declaradas como funções anônimas ou nomeadas. 
+Funções anônimas não possuem um nome e são declaradas como `(x: Int) => x+1`, onde entre parenteses estão os parâmetros e depois da seta está a expressão correspondente a está função. Funções nomeadas possuem a sintaxe `val addOne = (x: Int) => x+1`. Tanto o prefixo val quanto def podem ser utilizados para definir uma função, com a diferença entre estes é quando utilizado def a função é avaliada quando a função é chamada, enquanto val avalia a função ao compila-la. Ao chamar uma função definida com def uma nova instância desta função é criada, fazendo com que cada chamada sejá considerada diferente das outras.
+Funções podem retornar um ou mais valores, este valor podendo ser do tipo Unit, ou seja, não retornar nada.
+Como funções nesta linguagme são objetos estes podem ser passados como parâmetro para uma função conforme mostrado no exemplo a seguir:
+```Scala
+def fazConta(callback: (Int, Int) => Int, x: Int, y: Int) {
+    println(callback(x, y))
+}
+
+println("Realiza as operações matemáticas")
+fazConta((x, y) => x + y, 5, 6); 
+```
+###### Código por [DEVMEDIA](https://www.devmedia.com.br/conheca-a-linguagem-scala/32850)
+
+Scala traz a possibilidade de escrever códigos tanto em POO quanto em programação funcional. As funções em Scala podem ser separadas em dois grupos: Funções puras e Funções impuras.
 
 #### Funções Puras
 Funções puras, segundo Alvin Alexander, são funções onde o resultado depende somende dos valores inseridos na função, não podendo receber nenhum valor externo aos inputs (vindas do console ou de um banco de dados por exemplo), e que não promova nenhuma mudança em estados escondidos.
