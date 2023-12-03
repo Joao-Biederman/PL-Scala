@@ -94,12 +94,15 @@ Funções anônimas não possuem um nome e são declaradas como `(x: Int) => x+1
 Funções podem retornar um ou mais valores, este valor podendo ser do tipo Unit, ou seja, não retornar nada.
 Como funções nesta linguagme são objetos estes podem ser passados como parâmetro para uma função conforme mostrado no exemplo a seguir:
 ```Scala
-def fazConta(callback: (Int, Int) => Int, x: Int, y: Int) {
-    println(callback(x, y))
-}
+object Main {
+    def fazConta(callback: (Int, Int) => Int, x: Int, y: Int) {
+      println(callback(x, y))
+    }
 
-println("Realiza as operações matemáticas")
-fazConta((x, y) => x + y, 5, 6); // escreve no terminal a soma 5+6
+    def main(args: Array[String]) {
+        fazConta((x, y) => x + y, 5, 6); // escreve no terminal a soma 5+6
+    }
+}
 ```
 ###### Código por [DEVMEDIA](https://www.devmedia.com.br/conheca-a-linguagem-scala/32850)
 
