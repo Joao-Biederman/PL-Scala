@@ -2,7 +2,19 @@
 This repository was made as a draft for a work in the Programming Languages ​​class.
 
 ## Scala
-Scala é uma linguagem de programação multiparadigma de propósito geral. Seu nome provem de **Scalabe Language**, ou Linguagem Escalavel, e é utilizada em diversos tipos diferentes de programas, desde programas onde se expera modularizacão e escalabilidade até para aplicações de Big Data. Sua flexibilidade se deve a diversos fatores, um destes sendo sua alta compatibilidade com Java, podendo ser compilado em Java bytecode e rodar em uma JVM (Java Virtual Machine). Outro fator que auxilia em sua popularidade e uso é a capacidade de utilizar bibliotecas e códigos já existentes no JAVA. A linguagem foi criada no intuido de ser um "JAVA melhorado", possuindo uma sintaxe semelhante, porém, diminuindo significativamente a quantidade de código necessário para executar rotinas de tarefas.
+Scala é uma linguagem de programação de propósito geral, multiparadigma e de alto nível, pertencente à terceira geração de linguagens de programação. Foi lançada inicialmente em 2003 e recebe seu nome da abreviação de "Scalable Language" (Linguagem Escalável). Scala é amplamente utilizada em uma variedade de contextos, desde aplicações que exigem modularização e escalabilidade até projetos envolvendo Big Data. Sua flexibilidade é atribuída a diversos fatores, incluindo sua sólida compatibilidade com Java. Scala é compilada para Java bytecode e é executada na Máquina Virtual Java (JVM), o que facilita a integração com o ecossistema Java existente. A linguagem foi concebida com o objetivo de ser uma evolução do Java, mantendo uma sintaxe semelhante enquanto busca reduzir significativamente a quantidade de código necessária para realizar tarefas comuns. Esta abordagem conferiu a Scala uma reputação pela sua expressividade e concisão.
+
+### Código
+Os arquivos escritos em scala possuem a extensão .scala e podem ser executados com os comandos `scalac <nome do arquivo>.scala` para compilar o código e `scala <nome do objeto>` para executa-lo.
+O código abaixo foi escrito, nomeado Hello.scala, como exemplo:
+```Scala
+object Hello {
+    def main(args: Array[String]): Unit = {
+        println("Hello world!")
+    }
+}
+```
+Ao compila-lo os arquivos "Hello.class", "Hello.tasty" e "Hello$.class" foram gerados e ao executar o comando `scala Hello` a frase "Hello world!" foi escrita no terminal.
 
 ### Tipagem
 Em Scala, todos os valores são objetos, tendo seus tipos referenciados por classes.
@@ -27,7 +39,7 @@ Os tipos em Scala formam uma hierarquia, esta podendo ser representada da seguin
 Any é um tipo que pode referenciar qualquer tipo dentro do programa, seja este qual for.
 
 #### AnyVal
-AnyVal referencia qualquer valor no programa, desde letras até valores númericos e booleanos, qualquer variavel que diga respeito a um 
+AnyVal referencia qualquer valor no programa, desde letras até valores númericos e booleanos, qualquer variavel que diga respeito a um valor.
 
 #### AnyReference
 AnyReference diz respeito a variaveis que não possuem um valor. Variaveis não valoradas em Scala são variaveis cujo tipo é uma referencia. Este tipo é correspondente com o tipo "java.lang.Object" do JAVA.
@@ -75,7 +87,6 @@ Subtipo do tipo referencia quando está não referencia nada
 Subtipo para todos os tipos, incluindo NULL, não indica nenhum valor.
 
 ### Estruturas de controle
-
 #### If/else/else if
 Estrutura que impede a execução de uma parte do código a menos que uma condição seja atendida. Condições são expressões e o if retornará o resultado dela.
 
@@ -95,12 +106,12 @@ Funções podem retornar um ou mais valores, este valor podendo ser do tipo Unit
 Como funções nesta linguagme são objetos estes podem ser passados como parâmetro para uma função conforme mostrado no exemplo a seguir:
 ```Scala
 object Main {
-    def fazConta(callback: (Int, Int) => Int, x: Int, y: Int) {
+    def fazConta(callback: (Int, Int) => Int, x: Int, y: Int) { // Definimos um parâmentro que é uma função chamada callback, que para dois inteiros realiza uma função passada como parametro com retorno inteiro, tendo como parâmetros x e y.
       println(callback(x, y))
     }
 
     def main(args: Array[String]) {
-        fazConta((x, y) => x + y, 5, 6); // escreve no terminal a soma 5+6
+        fazConta((x, y) => x + y, 5, 6); // Chamamos fazConta de (x,y), onde definimos como parâmetros uma nova função x+y e os valores 5 e 6
     }
 }
 ```
@@ -122,3 +133,49 @@ def sum(list: List[Int]): Int = list match {
 
 #### Funções impuras
 São funções que alteram os parametros ou valores escondidos na função, acessam dados que não foram explicitamente passadas como parametros ou cujo retorno não dependente dos dados inseridos. Funções cujo retorno é do tipo Unit são um exemplo, uma vez que este tipo, apesar de ser um subtipo de valor, não retorna nada.
+```Scala
+object Contas {
+    def soma(a: Int, b: Int): Int  =  a + b // Função pura que retorna a soma de a e b
+
+    var y = 7;
+    def sub(x: Int): Int = x - y // Função impura que retorna a subtração de x com y
+
+    def main(args: Array[String]): Unit = {
+        println(soma(2,2)) // Resultado esperado == 4
+        println(sub(8)) // Resultado esperado == 1
+    }
+}
+```
+###### Código baseado em [Raquel Fontenelle](https://blog.cod3r.com.br/funcoes-puras-e-impuras/)
+
+Paradigma Funcional: Estudo Comparativo
+
+    Tipos de Dados e Listas
+
+    Estruturas de Controle
+
+    Funções (Primitivas, Numéricas, Especiais, Outras) e Notação Lambda
+
+    Formas Especiais, Formas Funcionais
+
+    Aplicação de Função
+
+    Estruturas para Representar Dados
+
+Paradigma Funcional: Relatório Prático
+
+    Caracterizar a linguagem quanto ao propósito, execução, nível, paradigma, geração e tipagem
+
+    Descrever instalação, tipos de dados básicos, palavras-chave, operadores, sentenças e funções da linguagem
+
+    Exemplos de aplicação dos conceitos de tipos de dados e listas na linguagem
+
+    Exemplos de aplicação dos conceitos de estruturas de controle na linguagem
+
+    Exemplos de aplicação dos conceitos de funções e notação lambda na linguagem
+
+    Exemplos de aplicação dos conceitos de formas especiais e formas funcionais na linguagem
+
+    Exemplos de aplicação dos conceitos de aplicação de função na linguagem
+
+    <!-- Exemplos de aplicação dos conceitos de estruturas para representar dados na linguagem -->
