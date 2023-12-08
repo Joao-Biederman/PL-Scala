@@ -147,35 +147,3 @@ object Contas {
 }
 ```
 ###### Código baseado em [Raquel Fontenelle](https://blog.cod3r.com.br/funcoes-puras-e-impuras/)
-
-Paradigma Funcional: Estudo Comparativo
-
-    Tipos de Dados e Listas
-
-    Estruturas de Controle
-
-    Funções (Primitivas, Numéricas, Especiais, Outras) e Notação Lambda
-
-    Formas Especiais, Formas Funcionais
-
-    Aplicação de Função
-
-    Estruturas para Representar Dados
-
-Paradigma Funcional: Relatório Prático
-
-    Caracterizar a linguagem quanto ao propósito, execução, nível, paradigma, geração e tipagem
-
-    Descrever instalação, tipos de dados básicos, palavras-chave, operadores, sentenças e funções da linguagem
-
-    Exemplos de aplicação dos conceitos de tipos de dados e listas na linguagem
-
-    Exemplos de aplicação dos conceitos de estruturas de controle na linguagem
-
-    Exemplos de aplicação dos conceitos de funções e notação lambda na linguagem
-
-    Exemplos de aplicação dos conceitos de formas especiais e formas funcionais na linguagem
-
-    Exemplos de aplicação dos conceitos de aplicação de função na linguagem
-
-    <!-- Exemplos de aplicação dos conceitos de estruturas para representar dados na linguagem -->
